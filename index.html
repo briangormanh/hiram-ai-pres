@@ -847,7 +847,7 @@
         }
         .gap-mini-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
             gap: 0.6rem;
             margin-bottom: 1.5rem;
         }
@@ -873,6 +873,51 @@
             font-style: normal;
             font-weight: 600;
             filter: brightness(1.5);
+        }
+        .gap-query-evidence {
+            max-width: 780px;
+            margin: 0 auto 1.5rem;
+            background: rgba(162, 11, 49, 0.05);
+            border: 1px solid rgba(162, 11, 49, 0.15);
+            border-radius: 10px;
+            padding: 1rem 1.3rem;
+        }
+        .gap-query-evidence-title {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0.65rem;
+        }
+        .gap-query-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.45rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            gap: 0.6rem;
+        }
+        .gap-query-row:last-child { border-bottom: none; }
+        .gap-query-text {
+            font-size: 0.72rem;
+            color: var(--text-light);
+            font-style: italic;
+            flex: 1;
+            min-width: 0;
+        }
+        .gap-query-meta {
+            font-size: 0.64rem;
+            color: var(--text-muted-light);
+            white-space: nowrap;
+            text-align: right;
+        }
+        .gap-query-pos {
+            color: var(--maroon);
+            filter: brightness(1.5);
+            font-weight: 600;
+        }
+        .gap-query-landing {
+            color: rgba(255,255,255,0.35);
+            font-size: 0.58rem;
         }
         .gap-has-grid {
             display: grid;
@@ -1356,6 +1401,9 @@
             .container { padding: 0 1.25rem; }
             .bar-row { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
             .bar-label { text-align: left; flex: none; }
+            .gap-query-row { flex-direction: column; gap: 0.15rem; }
+            .gap-query-meta { text-align: left; }
+            .gap-query-evidence { padding: 0.8rem 1rem; }
         }
     </style>
 </head>
@@ -1642,10 +1690,10 @@
                     <span class="proof-stat-value">801</span>
                     <span class="proof-stat-label">organic clicks</span>
                 </div>
-                <div class="proof-stat" style="visibility:hidden;">
+                <div class="proof-stat">
                     <span class="proof-stat-arrow">&rarr;</span>
-                    <span class="proof-stat-value">&mdash;</span>
-                    <span class="proof-stat-label">&nbsp;</span>
+                    <span class="proof-stat-value">6.0</span>
+                    <span class="proof-stat-label">avg. position</span>
                 </div>
                 <div class="proof-badge">Cited by AI Platforms</div>
             </div>
@@ -1712,47 +1760,75 @@
             <div class="gap-mini-grid">
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Psychology</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat"><em>Zero</em> career queries ranking</div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Communication</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat">5 impr &middot; <em>pos 99</em></div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Management</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat">79 impr &middot; <em>pos 84</em></div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Computer Science</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat">33 impr &middot; <em>pos 94</em></div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Sociology</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat">Queries &rarr; <em>wrong page</em></div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Public Health</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat"><em>Near zero</em> career queries</div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Digital Marketing</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat">1.4K impr &middot; <em>no career pg</em></div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Accounting</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat">132 impr &middot; <em>no career pg</em></div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Economics</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat"><em>Near zero</em> career queries</div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Art & Design</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat"><em>Zero</em> career queries ranking</div>
                 </div>
                 <div class="gap-mini-card">
                     <div class="gap-mini-name">Intervention Spec.</div>
-                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                    <div class="gap-mini-stat">24 impr &middot; <em>pos 8</em></div>
+                </div>
+            </div>
+
+            <div class="gap-query-evidence">
+                <div class="gap-query-evidence-title">What people are searching &mdash; and what Hiram shows them</div>
+                <div class="gap-query-row">
+                    <span class="gap-query-text">&ldquo;what can you do with a business management major&rdquo;</span>
+                    <span class="gap-query-meta">79 impr &middot; <span class="gap-query-pos">pos 84</span> &middot; <span class="gap-query-landing">program pg</span></span>
+                </div>
+                <div class="gap-query-row">
+                    <span class="gap-query-text">&ldquo;what can you do with a computer science degree&rdquo;</span>
+                    <span class="gap-query-meta">33 impr &middot; <span class="gap-query-pos">pos 94</span> &middot; <span class="gap-query-landing">program pg</span></span>
+                </div>
+                <div class="gap-query-row">
+                    <span class="gap-query-text">&ldquo;how to become an intervention specialist&rdquo;</span>
+                    <span class="gap-query-meta">24 impr &middot; <span class="gap-query-pos">pos 8</span> &middot; <span class="gap-query-landing">program pg</span></span>
+                </div>
+                <div class="gap-query-row">
+                    <span class="gap-query-text">&ldquo;what can you do with a biochemistry degree&rdquo;</span>
+                    <span class="gap-query-meta">14 impr &middot; <span class="gap-query-pos">pos 62&ndash;95</span> &middot; <span class="gap-query-landing">scattered</span></span>
+                </div>
+                <div class="gap-query-row">
+                    <span class="gap-query-text">&ldquo;what can you do with a communication degree&rdquo;</span>
+                    <span class="gap-query-meta">5 impr &middot; <span class="gap-query-pos">pos 99</span> &middot; <span class="gap-query-landing">more-than-a-major pg</span></span>
+                </div>
+                <div class="gap-query-row">
+                    <span class="gap-query-text">&ldquo;jobs for sociology majors&rdquo;</span>
+                    <span class="gap-query-meta">1 impr &middot; <span class="gap-query-pos">pos 1</span> &middot; <span class="gap-query-landing">Poli Sci career pg</span></span>
                 </div>
             </div>
 
