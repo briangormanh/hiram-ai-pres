@@ -829,6 +829,121 @@
         }
 
         /* AI Pages Proof Table */
+        /* Content Gap Mini Cards */
+        .gap-intro {
+            max-width: 700px;
+            margin: 0 auto 1.75rem;
+            text-align: center;
+        }
+        .gap-intro-title {
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 0.35rem;
+        }
+        .gap-intro-sub {
+            font-size: 0.95rem;
+            color: var(--text-muted-light);
+        }
+        .gap-mini-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.6rem;
+            margin-bottom: 1.5rem;
+        }
+        .gap-mini-card {
+            background: rgba(162, 11, 49, 0.08);
+            border: 1px solid rgba(162, 11, 49, 0.2);
+            border-radius: 8px;
+            padding: 0.75rem 0.6rem;
+            text-align: center;
+        }
+        .gap-mini-name {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 0.15rem;
+        }
+        .gap-mini-stat {
+            font-size: 0.68rem;
+            color: var(--text-muted-light);
+        }
+        .gap-mini-stat em {
+            color: var(--maroon);
+            font-style: normal;
+            font-weight: 600;
+            filter: brightness(1.5);
+        }
+        .gap-has-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 0.6rem;
+            margin-bottom: 1.5rem;
+        }
+        .gap-has-card {
+            background: rgba(72, 199, 90, 0.06);
+            border: 1px solid rgba(72, 199, 90, 0.15);
+            border-radius: 8px;
+            padding: 0.65rem 0.6rem;
+            text-align: center;
+        }
+        .gap-has-name {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+        .gap-has-stat {
+            font-size: 0.65rem;
+            color: #48C75A;
+        }
+        .gap-divider-label {
+            text-align: center;
+            font-size: 0.68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted-light);
+            margin: 1.25rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .gap-divider-label::before, .gap-divider-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--navy-border);
+        }
+        .gap-faq-callout {
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+            background: rgba(255,255,255,0.04);
+            border-left: 3px solid var(--cyan);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-muted-light);
+        }
+        .gap-faq-callout strong {
+            color: var(--text-light);
+        }
+        .gap-faq-queries {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.5rem;
+        }
+        .gap-faq-query {
+            font-size: 0.72rem;
+            font-weight: 500;
+            background: rgba(64, 217, 241, 0.1);
+            border: 1px solid rgba(64, 217, 241, 0.2);
+            color: var(--cyan);
+            padding: 0.2rem 0.6rem;
+            border-radius: 100px;
+        }
+
         .ai-pages-proof {
             max-width: 640px;
             margin: 2.5rem auto 0;
@@ -1230,6 +1345,7 @@
             .proof-cards { grid-template-columns: 1fr; }
             .system-pillars { grid-template-columns: repeat(2, 1fr); }
             .case-cards { grid-template-columns: 1fr; }
+            .gap-mini-grid, .gap-has-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
             .ask-grid { grid-template-columns: 1fr; }
             .bar-label { flex: 0 0 100px; font-size: 0.7rem; }
         }
@@ -1536,6 +1652,121 @@
         </div>
 
         <p class="proof-takeaway reveal reveal-delay-3">New content ranks fast <em style="font-style:italic;">and</em> gets picked up by AI</p>
+
+        <!-- Content Gap Section -->
+        <div class="reveal" style="margin-top:2.5rem; padding-top:2.5rem; border-top:1px solid var(--navy-border);">
+            <div class="gap-intro">
+                <div class="gap-intro-title">But 11 Programs Still Have No Career Content</div>
+                <div class="gap-intro-sub">Career blog posts are your proven growth engine. Here are the programs with career content (green) vs. without (red). GSC data: Feb 2025 – Feb 2026.</div>
+            </div>
+
+            <div class="gap-divider-label">Has dedicated career content</div>
+            <div class="gap-has-grid">
+                <div class="gap-has-card">
+                    <div class="gap-has-name">History</div>
+                    <div class="gap-has-stat">229K impr · pos 7.0</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Political Science</div>
+                    <div class="gap-has-stat">189K impr · pos 6.0</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Creative Writing</div>
+                    <div class="gap-has-stat">105K impr · pos 12.0</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Env. Studies</div>
+                    <div class="gap-has-stat">101K impr · pos 17.5</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Nursing</div>
+                    <div class="gap-has-stat">86K impr · pos 27.9</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Biology</div>
+                    <div class="gap-has-stat">64K impr · pos 21.4</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Sport Mgmt</div>
+                    <div class="gap-has-stat">57K impr · pos 36.1</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Education</div>
+                    <div class="gap-has-stat">46K impr · pos 17.8</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Chemistry</div>
+                    <div class="gap-has-stat">23K impr · pos 11.6</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Biomed Humanities</div>
+                    <div class="gap-has-stat">7.8K impr · pos 20.6</div>
+                </div>
+                <div class="gap-has-card">
+                    <div class="gap-has-name">Criminal Justice</div>
+                    <div class="gap-has-stat">1.3K impr · pos 23.4</div>
+                </div>
+            </div>
+
+            <div class="gap-divider-label" style="color:rgba(162,11,49,0.7);">No dedicated career content — demand going unanswered</div>
+            <div class="gap-mini-grid">
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Psychology</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Communication</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Management</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Computer Science</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Sociology</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Public Health</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Digital Marketing</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Accounting</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Economics</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Art & Design</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+                <div class="gap-mini-card">
+                    <div class="gap-mini-name">Intervention Spec.</div>
+                    <div class="gap-mini-stat">Lands on <em>program pg</em></div>
+                </div>
+            </div>
+
+            <div class="gap-faq-callout">
+                <strong>Decision-stage questions are also unanswered.</strong> Queries like "what is hiram college known for" (2,300+ impressions) and "is hiram college a good school" (660+ impressions) scatter across 8+ pages instead of landing on dedicated content that directly answers each question.
+                <div class="gap-faq-queries">
+                    <span class="gap-faq-query">"what is hiram known for" — 2,343 impr</span>
+                    <span class="gap-faq-query">"is hiram a good school" — 663 impr</span>
+                    <span class="gap-faq-query">"is hiram a party school" — 173 impr</span>
+                    <span class="gap-faq-query">"is hiram religious" — 127 impr</span>
+                    <span class="gap-faq-query">"is hiram college closing" — 104 impr</span>
+                </div>
+            </div>
+        </div>
 
         <div class="ai-pages-proof reveal reveal-delay-4">
             <div class="ai-pages-header" style="display:flex; justify-content:space-between; align-items:center;">
